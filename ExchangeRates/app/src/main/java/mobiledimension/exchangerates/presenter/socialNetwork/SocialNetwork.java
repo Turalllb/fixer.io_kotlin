@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.presenter.SocialNetwork;
+package mobiledimension.exchangerates.presenter.socialNetwork;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import org.jetbrains.annotations.NotNull;
 import javax.inject.Inject;
 
 import mobiledimension.exchangerates.presenter.base.BasePresenter;
-import mobiledimension.exchangerates.ui.SocialNetwork.SocialNetworkView;
+import mobiledimension.exchangerates.ui.socialNetwork.SocialNetworkView;
 
 
 public class SocialNetwork<V extends SocialNetworkView> extends BasePresenter<V> implements SocialNetworkPresenter<V> {

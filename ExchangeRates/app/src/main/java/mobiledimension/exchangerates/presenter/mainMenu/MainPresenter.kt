@@ -1,8 +1,8 @@
-package mobiledimension.exchangerates.presenter.MainMenu
+package mobiledimension.exchangerates.presenter.mainMenu
 
 import mobiledimension.exchangerates.data.db.model.ModelData
 import mobiledimension.exchangerates.presenter.base.MvpPresenter
-import mobiledimension.exchangerates.ui.MainMenu.MainView
+import mobiledimension.exchangerates.ui.mainMenu.MainView
 
 
 interface MainPresenter<V : MainView> : MvpPresenter<V> {

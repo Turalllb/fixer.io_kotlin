@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.ui.MainMenu
+package mobiledimension.exchangerates.ui.mainMenu
 
 import android.content.IntentFilter
 import android.net.ConnectivityManager
@@ -11,10 +11,10 @@ import android.widget.*
 import mobiledimension.exchangerates.AdapterModelData
 import mobiledimension.exchangerates.MyApplication.Companion.appComponent
 import mobiledimension.exchangerates.R
-import mobiledimension.exchangerates.Utils.NetworkChangeReceiver
+import mobiledimension.exchangerates.utils.NetworkChangeReceiver
 import mobiledimension.exchangerates.di.DaggerActivityComponent
-import mobiledimension.exchangerates.presenter.MainMenu.MainPresenter
-import mobiledimension.exchangerates.ui.DataPickerFragment.DatePickerFragment
+import mobiledimension.exchangerates.presenter.mainMenu.MainPresenter
+import mobiledimension.exchangerates.ui.dataPickerFragment.DatePickerFragment
 import java.util.*
 import javax.inject.Inject
 

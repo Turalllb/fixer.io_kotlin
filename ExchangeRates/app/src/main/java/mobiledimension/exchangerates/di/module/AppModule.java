@@ -6,9 +6,9 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import mobiledimension.exchangerates.presenter.MainMenu.MainMenuPresenter;
-import mobiledimension.exchangerates.presenter.MainMenu.MainPresenter;
-import mobiledimension.exchangerates.ui.MainMenu.MainView;
+import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter;
+import mobiledimension.exchangerates.presenter.mainMenu.MainPresenter;
+import mobiledimension.exchangerates.ui.mainMenu.MainView;
 
 @Module
 public class AppModule {

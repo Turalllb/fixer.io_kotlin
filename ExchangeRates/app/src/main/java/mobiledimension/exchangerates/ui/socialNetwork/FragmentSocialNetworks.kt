@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.ui.SocialNetwork
+package mobiledimension.exchangerates.ui.socialNetwork
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -13,7 +13,7 @@ import com.github.gorbin.asne.vk.VkSocialNetwork
 import mobiledimension.exchangerates.MyApplication.Companion.appComponent
 import mobiledimension.exchangerates.R
 import mobiledimension.exchangerates.di.DaggerFragmentComponent
-import mobiledimension.exchangerates.presenter.SocialNetwork.SocialNetworkPresenter
+import mobiledimension.exchangerates.presenter.socialNetwork.SocialNetworkPresenter
 import javax.inject.Inject
 
 

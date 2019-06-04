@@ -2,7 +2,7 @@ package mobiledimension.exchangerates.di.module;
 
 import dagger.Module;
 import dagger.Provides;
-import mobiledimension.exchangerates.Utils.NetworkChangeReceiver;
+import mobiledimension.exchangerates.utils.NetworkChangeReceiver;
 
 @Module
 public class ActivityModule {

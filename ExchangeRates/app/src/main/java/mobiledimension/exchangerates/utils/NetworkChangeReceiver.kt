@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.Utils
+package mobiledimension.exchangerates.utils
 
 import android.app.Activity
 import android.content.BroadcastReceiver

@@ -1,6 +1,6 @@
-package mobiledimension.exchangerates.presenter.MainMenu
+package mobiledimension.exchangerates.presenter.mainMenu
 
-import mobiledimension.exchangerates.ui.MainMenu.MainView
+import mobiledimension.exchangerates.ui.mainMenu.MainView
 
 //Implementation of the pattern Null object
 class NoView : MainView {

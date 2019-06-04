@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.presenter.MainMenu
+package mobiledimension.exchangerates.presenter.mainMenu
 
 import java.util.ArrayList
 import java.util.Arrays
@@ -11,7 +11,7 @@ import mobiledimension.exchangerates.data.DataManager
 import mobiledimension.exchangerates.data.db.model.ModelData
 import mobiledimension.exchangerates.data.db.model.PostModel
 import mobiledimension.exchangerates.presenter.base.BasePresenter
-import mobiledimension.exchangerates.ui.MainMenu.MainView
+import mobiledimension.exchangerates.ui.mainMenu.MainView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

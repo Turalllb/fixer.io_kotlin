@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.ui.MainMenu
+package mobiledimension.exchangerates.ui.mainMenu
 
 
 import mobiledimension.exchangerates.ui.base.BaseView

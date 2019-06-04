@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.ui.SocialNetwork
+package mobiledimension.exchangerates.ui.socialNetwork
 
 import mobiledimension.exchangerates.ui.base.BaseView
 

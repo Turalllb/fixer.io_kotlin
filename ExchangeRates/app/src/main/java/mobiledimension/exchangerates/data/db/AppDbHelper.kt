@@ -1,19 +1,16 @@
 package mobiledimension.exchangerates.data.db
 
 import android.content.ContentValues
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.util.Log
 
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.Date
 
 import javax.inject.Inject
 
 
-import mobiledimension.exchangerates.MyApplication
-import mobiledimension.exchangerates.presenter.MainMenu.MainMenuPresenter
+import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter
 
 import mobiledimension.exchangerates.data.db.ExchangeRatesTable.COLUMN.CURRENCY
 import mobiledimension.exchangerates.data.db.ExchangeRatesTable.COLUMN.DATE
