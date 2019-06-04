@@ -43,6 +43,7 @@ class MainMenu : AppCompatActivity(), MainView, RadioGroup.OnCheckedChangeListen
         activityComponent.inject(this)
 
 
+
         //region findViewById
         val currentDate = findViewById<View>(R.id.currentDateTextView) as TextView
         spinnerOfCurrencies = findViewById<View>(R.id.spinnerCurrency) as Spinner
