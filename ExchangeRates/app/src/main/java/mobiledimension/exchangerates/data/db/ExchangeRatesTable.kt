@@ -4,7 +4,7 @@ object ExchangeRatesTable {
 
     const val TABLE = " ExchangeRatesTable"
 
-    val CREATE_SCRIPT = ("create table ExchangeRatesTable ("
+    const val CREATE_SCRIPT = ("create table ExchangeRatesTable ("
             + "date int,"
             + "currency text,"
             + "json text,"

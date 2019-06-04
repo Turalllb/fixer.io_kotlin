@@ -25,17 +25,14 @@ import mobiledimension.exchangerates.data.db.ExchangeRatesTable.TABLE
 class AppDbHelper @Inject
 internal constructor(private val exchangeRatesDatabase: SQLiteDatabase) : DbHelper {
 
-    override fun setDataBase(strDate: String, currency: String, json: String) {
-        // создаем объект для данных
+    override fun setDataBase(strDate: String?, currency: String?, json: String) {
         val cv = ContentValues()
         try {
             val format = SimpleDateFormat()
-            format.applyPattern("yyyy-MM-dd") //проверить не парсит ли формат в котором дата находится изначально
+            format.applyPattern("yyyy-MM-dd")
             val date = format.parse(strDate)
             val unixTimeDate = date.time
-            Log.d(MainMenuPresenter.LOG_TAG, unixTimeDate.toString() + "")
-            // подготовим данные для вставки в виде пар: наименование столбца -
-            // значение
+
             with(cv){
                 put(DATE, unixTimeDate)
                 put(CURRENCY, currency)
@@ -45,30 +42,21 @@ internal constructor(private val exchangeRatesDatabase: SQLiteDatabase) : DbHelp
             e.printStackTrace()
         }
 
-        Log.d(MainMenuPresenter.LOG_TAG, "--- Insert in ExchangeRatesDatabase: ---")
-        // вставляем запись и получаем ее ID
         val rowID = exchangeRatesDatabase.insert(TABLE, null, cv)
         Log.d(MainMenuPresenter.LOG_TAG, "row inserted, ID = $rowID")
 
-        // делаем запрос всех данных из таблицы ExchangeRatesDatabase, получаем Cursor
         val c = exchangeRatesDatabase.query(TABLE, null, null, null, null, null, null)
 
-        // ставим позицию курсора на первую строку выборки
-        // если в выборке нет строк, вернется false
         if (c.moveToFirst()) {
-            // определяем номера столбцов по имени в выборке
             val idDate = c.getColumnIndex(DATE)
             val currencyColIndex = c.getColumnIndex(CURRENCY)
             val jsonColIndex = c.getColumnIndex(JSON)
 
             do {
-                // получаем значения по номерам столбцов и пишем все в лог
                 Log.d(MainMenuPresenter.LOG_TAG,
                         "date = " + c.getLong(idDate) +
                                 ", currency = " + c.getString(currencyColIndex) +
                                 ", json = " + c.getString(jsonColIndex))
-                // переход на следующую строку
-                // а если следующей нет (текущая - последняя), то false - выходим из цикла
             } while (c.moveToNext())
         } else
             Log.d(MainMenuPresenter.LOG_TAG, "0 rows")
@@ -93,8 +81,8 @@ internal constructor(private val exchangeRatesDatabase: SQLiteDatabase) : DbHelp
 
             postModel = if (c != null && c.moveToFirst()) c.getString(c.getColumnIndex(JSON)) else null
             c?.close()
-        } catch (e: ParseException) { //ловим не только ParseException, но и исключение, которое выбросится,
-            e.printStackTrace()     // если в момент выполнения программы, удалить базу данных с
+        } catch (e: ParseException) {
+            e.printStackTrace()
         }
 
         return postModel

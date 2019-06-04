@@ -34,8 +34,7 @@ class MainMenu : AppCompatActivity(), MainView, RadioGroup.OnCheckedChangeListen
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_menu)
-        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //постоянно портретная ориентация
-        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)  //приложение на полный экран
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         val activityComponent = DaggerActivityComponent.builder()
                 .appComponent(appComponent)
@@ -57,10 +56,10 @@ class MainMenu : AppCompatActivity(), MainView, RadioGroup.OnCheckedChangeListen
         mainPresenter.setCurrentDate(date)
 
 
-        adapterModelData = AdapterModelData(this, R.layout.rates, mainPresenter.rates) //Адаптер списка с курсом валют
+        adapterModelData = AdapterModelData(this, R.layout.rates, mainPresenter.rates)
         listView.adapter = adapterModelData
 
-        spinnerAdapter = ArrayAdapter(this, R.layout.custom_spinner_item, mainPresenter.currencies) //Адаптер для спиннера
+        spinnerAdapter = ArrayAdapter(this, R.layout.custom_spinner_item, mainPresenter.currencies)
         spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerOfCurrencies.adapter = spinnerAdapter
 

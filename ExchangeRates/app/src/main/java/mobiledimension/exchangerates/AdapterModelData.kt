@@ -30,7 +30,7 @@ class AdapterModelData(context: Context, private val layout: Int, private val mo
                 with(tag as ViewHolder) {
                     with(modelDataList[position]) {
                         nameRate.text = name
-                        rate.text = java.lang.Double.toString(value!!)
+                        rate.text = value.toString()
                     }
                 }
             }

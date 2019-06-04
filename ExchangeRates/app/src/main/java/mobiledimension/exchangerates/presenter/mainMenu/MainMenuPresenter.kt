@@ -96,8 +96,8 @@ internal constructor(private val dataManager: DataManager) : BasePresenter<V>(),
     }
 
 
-    override fun onDatePicked(date: String) {
-        currentDate = date
+    override fun onDatePicked(formattedDate: String) {
+        currentDate = formattedDate
         uploadData()
     }
 

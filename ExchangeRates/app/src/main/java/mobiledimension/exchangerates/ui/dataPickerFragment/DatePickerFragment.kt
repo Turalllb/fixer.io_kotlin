@@ -36,7 +36,7 @@ class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener 
         //region получаем дату из TextView и парсим в DataPiker, чтобы при открытии диалога, он был наведен на установленную дату
         currentDate = activity!!.findViewById(R.id.currentDateTextView)
         val date = currentDate!!.text.toString()
-        if (!date.isEmpty()) {
+        if (date.isNotEmpty()) {
             val arrayDate = date.split("-".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
             year = Integer.parseInt(arrayDate[0])
             month = Integer.parseInt(arrayDate[1]) - 1

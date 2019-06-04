@@ -7,8 +7,6 @@ import com.google.gson.annotations.SerializedName
 import java.util.*
 
 
-/*Этот подход использовать "ручной парсинг" и POJO класс сделан ради эксперимента.
- Можно было для json объекта rates использовать HashMap, в который Gson может парсить из "коробки", но тогда бы пришлось изобретать сортировки для HashMap. */
 class  PostModel {
 
     @SerializedName("base")
