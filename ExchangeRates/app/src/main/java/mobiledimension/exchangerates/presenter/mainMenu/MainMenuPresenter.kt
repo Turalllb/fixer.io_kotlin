@@ -60,6 +60,7 @@ internal constructor(private val dataManager: DataManager) : BasePresenter<V>(),
 
                 override fun onFailure(call: Call<PostModel>, t: Throwable) {
                     view.showToast("Сетевая ошибка")
+                    view.refreshAdapterModelDate()
                 }
             })
         }
@@ -86,7 +87,6 @@ internal constructor(private val dataManager: DataManager) : BasePresenter<V>(),
         currenciesArrayList.clear()
         currenciesArrayList.addAll(postModel.currenciesArrayList)
         currenciesArrayList.sort()
-        Collections.sort(currenciesArrayList)
         view.refreshSpinner()
         /* Не всегда в спиннере после обновления будет стоять валюта по которой сделан запрос,
            так как список спиннера тоже всегда обновляется, поэтому вручную устанавливаю текущую валюту*/

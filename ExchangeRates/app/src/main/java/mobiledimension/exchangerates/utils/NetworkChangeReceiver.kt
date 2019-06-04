@@ -27,10 +27,8 @@ class NetworkChangeReceiver : BroadcastReceiver() {
     private fun checkConnect(context: Context): Boolean {
         val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo: NetworkInfo?
-        if (cm != null) {
-            networkInfo = cm.activeNetworkInfo
-            return networkInfo != null && networkInfo.isConnected
-        } else
-            return false
+        networkInfo = cm.activeNetworkInfo
+        return networkInfo != null && networkInfo.isConnected
     }
+
 }
