@@ -8,13 +8,11 @@ import android.text.format.DateFormat
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
-import mobiledimension.exchangerates.AdapterModelData
 import mobiledimension.exchangerates.MyApplication.Companion.appComponent
 import mobiledimension.exchangerates.R
-import mobiledimension.exchangerates.utils.NetworkChangeReceiver
 import mobiledimension.exchangerates.di.DaggerActivityComponent
-import mobiledimension.exchangerates.presenter.mainMenu.MainPresenter
 import mobiledimension.exchangerates.ui.dataPickerFragment.DatePickerFragment
+import mobiledimension.exchangerates.ui.mainMenu.adapter.AdapterModelData
 import java.util.*
 import javax.inject.Inject
 
@@ -40,7 +38,6 @@ class MainMenu : AppCompatActivity(), MainView, RadioGroup.OnCheckedChangeListen
                 .appComponent(appComponent)
                 .build()
         activityComponent.inject(this)
-
 
 
         //region findViewById

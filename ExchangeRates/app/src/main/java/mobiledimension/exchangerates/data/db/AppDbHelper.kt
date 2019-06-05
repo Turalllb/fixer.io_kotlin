@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat
 import javax.inject.Inject
 
 
-import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainMenuPresenter
 
 import mobiledimension.exchangerates.data.db.ExchangeRatesTable.COLUMN.CURRENCY
 import mobiledimension.exchangerates.data.db.ExchangeRatesTable.COLUMN.DATE

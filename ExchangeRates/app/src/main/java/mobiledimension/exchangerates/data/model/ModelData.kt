@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates.data.db.model
+package mobiledimension.exchangerates.data.model
 
 
 import java.util.Comparator

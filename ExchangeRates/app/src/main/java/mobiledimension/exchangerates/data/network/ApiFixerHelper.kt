@@ -1,7 +1,7 @@
 package mobiledimension.exchangerates.data.network
 
 
-import mobiledimension.exchangerates.data.db.model.PostModel
+import mobiledimension.exchangerates.data.model.PostModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

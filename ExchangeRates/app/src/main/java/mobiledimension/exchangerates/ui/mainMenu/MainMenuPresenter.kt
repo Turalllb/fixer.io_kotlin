@@ -1,24 +1,18 @@
-package mobiledimension.exchangerates.presenter.mainMenu
-
-import java.util.ArrayList
-import java.util.Arrays
-import java.util.Collections
-
-import javax.inject.Inject
+package mobiledimension.exchangerates.ui.mainMenu
 
 import mobiledimension.exchangerates.R
 import mobiledimension.exchangerates.data.DataManager
-import mobiledimension.exchangerates.data.db.model.ModelData
-import mobiledimension.exchangerates.data.db.model.PostModel
-import mobiledimension.exchangerates.presenter.base.BasePresenter
-import mobiledimension.exchangerates.ui.mainMenu.MainView
+import mobiledimension.exchangerates.data.model.ModelData
+import mobiledimension.exchangerates.data.model.ModelData.Companion.COMPARATOR_NAME
+import mobiledimension.exchangerates.data.model.ModelData.Companion.COMPARATOR_VALUE_ASCENDING
+import mobiledimension.exchangerates.data.model.ModelData.Companion.COMPARATOR_VALUE_DESCENDING
+import mobiledimension.exchangerates.data.model.PostModel
+import mobiledimension.exchangerates.ui.base.BasePresenter
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
-import mobiledimension.exchangerates.data.db.model.ModelData.Companion.COMPARATOR_NAME
-import mobiledimension.exchangerates.data.db.model.ModelData.Companion.COMPARATOR_VALUE_ASCENDING
-import mobiledimension.exchangerates.data.db.model.ModelData.Companion.COMPARATOR_VALUE_DESCENDING
+import java.util.*
+import javax.inject.Inject
 
 
 class MainMenuPresenter<V : MainView> @Inject
@@ -32,7 +26,6 @@ internal constructor(private val dataManager: DataManager) : BasePresenter<V>(),
 
     override val currencies: List<String>
         get() = currenciesArrayList
-
 
 
     override fun setCurrentDate(currentDate: String) {

@@ -1,11 +1,8 @@
-package mobiledimension.exchangerates.presenter.socialNetwork
+package mobiledimension.exchangerates.ui.socialNetwork
 
 import android.graphics.Bitmap
-
 import com.github.gorbin.asne.core.SocialNetworkManager
-
-import mobiledimension.exchangerates.presenter.base.MvpPresenter
-import mobiledimension.exchangerates.ui.socialNetwork.SocialNetworkView
+import mobiledimension.exchangerates.ui.base.MvpPresenter
 
 interface SocialNetworkPresenter<V : SocialNetworkView> : MvpPresenter<V> {
 

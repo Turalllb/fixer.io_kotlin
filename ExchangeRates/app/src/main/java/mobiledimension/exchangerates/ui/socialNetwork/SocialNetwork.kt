@@ -1,17 +1,13 @@
-package mobiledimension.exchangerates.presenter.socialNetwork
+package mobiledimension.exchangerates.ui.socialNetwork
 
 import android.graphics.Bitmap
 import android.os.Bundle
-
 import com.github.gorbin.asne.core.SocialNetworkManager
 import com.github.gorbin.asne.core.listener.OnPostingCompleteListener
 import com.github.gorbin.asne.vk.VkSocialNetwork
 import com.vk.sdk.VKScope
-
+import mobiledimension.exchangerates.ui.base.BasePresenter
 import javax.inject.Inject
-
-import mobiledimension.exchangerates.presenter.base.BasePresenter
-import mobiledimension.exchangerates.ui.socialNetwork.SocialNetworkView
 
 
 class SocialNetwork<V : SocialNetworkView> @Inject

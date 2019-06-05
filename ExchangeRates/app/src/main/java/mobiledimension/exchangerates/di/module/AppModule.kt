@@ -6,8 +6,8 @@ import javax.inject.Singleton
 
 import dagger.Module
 import dagger.Provides
-import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter
-import mobiledimension.exchangerates.presenter.mainMenu.MainPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainMenuPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainPresenter
 import mobiledimension.exchangerates.ui.mainMenu.MainView
 
 @Module

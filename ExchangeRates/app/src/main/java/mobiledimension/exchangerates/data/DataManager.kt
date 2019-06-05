@@ -4,9 +4,8 @@ import com.google.gson.Gson
 
 import javax.inject.Inject
 
-import mobiledimension.exchangerates.data.db.AppDbHelper
 import mobiledimension.exchangerates.data.db.DbHelper
-import mobiledimension.exchangerates.data.db.model.PostModel
+import mobiledimension.exchangerates.data.model.PostModel
 import mobiledimension.exchangerates.data.network.ApiFixerHelper
 import retrofit2.Callback
 

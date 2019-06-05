@@ -13,7 +13,6 @@ import com.github.gorbin.asne.vk.VkSocialNetwork
 import mobiledimension.exchangerates.MyApplication.Companion.appComponent
 import mobiledimension.exchangerates.R
 import mobiledimension.exchangerates.di.DaggerFragmentComponent
-import mobiledimension.exchangerates.presenter.socialNetwork.SocialNetworkPresenter
 import javax.inject.Inject
 
 
@@ -47,7 +46,7 @@ class FragmentSocialNetworks : Fragment(), SocialNetworkView, SocialNetworkManag
         if (socialFragment != null) {
             socialNetworkManager = socialFragment as SocialNetworkManager
             //if manager exist - get and setup login only for initialized SocialNetworks
-            if (!socialNetworkManager.initializedSocialNetworks.isEmpty()) {
+            if (socialNetworkManager.initializedSocialNetworks.isNotEmpty()) {
                 val socialNetworks = socialNetworkManager.initializedSocialNetworks
                 for (socialNetwork in socialNetworks) {
                     //socialNetwork.setOnLoginCompleteListener(this);

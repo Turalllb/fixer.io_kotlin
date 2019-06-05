@@ -9,8 +9,8 @@ import mobiledimension.exchangerates.data.network.ApiFixer
 import mobiledimension.exchangerates.di.module.AppModule
 import mobiledimension.exchangerates.di.module.DbModule
 import mobiledimension.exchangerates.di.module.PathModule
-import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter
-import mobiledimension.exchangerates.presenter.mainMenu.MainPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainMenuPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainPresenter
 import mobiledimension.exchangerates.ui.mainMenu.MainView
 
 @Singleton

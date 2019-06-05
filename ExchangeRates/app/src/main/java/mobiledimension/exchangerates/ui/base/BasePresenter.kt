@@ -1,7 +1,6 @@
-package mobiledimension.exchangerates.presenter.base
+package mobiledimension.exchangerates.ui.base
 
-import mobiledimension.exchangerates.presenter.mainMenu.NoView
-import mobiledimension.exchangerates.ui.base.BaseView
+import mobiledimension.exchangerates.ui.mainMenu.NoView
 
 open class BasePresenter<V : BaseView> : MvpPresenter<V> {
 

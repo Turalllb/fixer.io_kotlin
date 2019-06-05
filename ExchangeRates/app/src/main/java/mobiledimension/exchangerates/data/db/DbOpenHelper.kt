@@ -7,7 +7,7 @@ import android.util.Log
 
 import javax.inject.Inject
 
-import mobiledimension.exchangerates.presenter.mainMenu.MainMenuPresenter
+import mobiledimension.exchangerates.ui.mainMenu.MainMenuPresenter
 
 
 /**

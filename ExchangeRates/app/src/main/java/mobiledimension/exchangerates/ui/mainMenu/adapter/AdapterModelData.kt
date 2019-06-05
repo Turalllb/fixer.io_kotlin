@@ -1,4 +1,4 @@
-package mobiledimension.exchangerates
+package mobiledimension.exchangerates.ui.mainMenu.adapter
 
 
 import android.content.Context
@@ -7,15 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import mobiledimension.exchangerates.R
 
-import mobiledimension.exchangerates.data.db.model.ModelData
+import mobiledimension.exchangerates.data.model.ModelData
 
 
 /**
  * Created by Турал on 30.11.2017.
  */
 
-class AdapterModelData(context: Context, private val layout: Int, private val modelDataList: List<ModelData>) : ArrayAdapter<ModelData>(context, layout, modelDataList) {
+internal class AdapterModelData(context: Context, private val layout: Int, private val modelDataList: List<ModelData>) : ArrayAdapter<ModelData>(context, layout, modelDataList) {
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
 
